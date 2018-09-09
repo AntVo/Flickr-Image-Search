@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SearchBar from './components/SearchBar';
+import ImageGallery from './components/ImageGallery';
 
-class App extends Component {
+import './App.css';
+import 'bulma/css/bulma.css'
+
+export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      	<h1 className="title is-4">Flickr Image Search</h1>
+        <SearchBar  />
+        <ImageGallery  />
       </div>
     );
   }
 }
 
-export default App;
